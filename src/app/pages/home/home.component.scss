@@ -1,0 +1,84 @@
+
+$background-color: #2D2D2A;
+$primary-color: #E94F37;
+$secondary-color: #393E41;
+$text-light-color: #F5F5F5;
+$text-dark-color: #C2C2C2;
+
+
+body {
+  margin: 0;
+  font-family: 'AlteHaasGroteskBold', Arial,  Helvetica, sans-serif;
+  background-color: $background-color;
+  color: $text-light-color;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+  background-color: $background-color;
+  position: relative;
+
+  .top-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px; 
+    height: auto; 
+    margin: 10px;
+
+    .top-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  h1 {
+    color: $primary-color;
+    margin-bottom: 5rem;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  button {
+    background-color: $primary-color;
+    color: $text-light-color;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: lighten($primary-color, 10%);
+      transform: translateY(-3px);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.5);
+    }
+  }
+
+  .logged-in-message {
+    background-color: $secondary-color;
+    color: $text-light-color;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+}
